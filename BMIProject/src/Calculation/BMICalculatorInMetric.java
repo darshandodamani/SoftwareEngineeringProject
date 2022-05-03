@@ -1,7 +1,7 @@
 package Calculation;
-import java.text.DecimalFormat;           //this will pull out decimal format
+import java.text.DecimalFormat;               //this will pull out decimal format
 import java.util.Scanner;
-import java.util.*;				          // this will put everything
+//import java.util.*;				          // this will put everything
 
 public class BMICalculatorInMetric {
 	
