@@ -1,119 +1,130 @@
+//Java Program to Calculate BMI and recommend diet
+//Authors: Uhegbu Chidiebere Emmanuel, Darshan Dodamani, Midhun Kanadan
+//Software Engineering Project Submission 2
+
+//Category	BMI Range
+//severly underweight < 15
+
+//Underweight	< 18.5
+//Normal	18.5 - 25
+//Overweight	25 - 30
+//Obese	> 30
+
 package Calculation;
-import java.text.DecimalFormat;               //this will pull out decimal format
 import java.util.Scanner;
-//import java.util.*;				          // this will put everything
+import java.util.*; 				          // this will put everything
 
-public class BMICalculatorInMetric {
-	
-	public static void main(String[] args) throws Exception {
-		int gender, age, selection;
-		double totalBMI, weight, feet, inches, totalHeightinInches;
-		final int BMI_CONSTANT_VALUE=703;
-		
-		Scanner inputval = new Scanner(System.in);
-		
-		System.out.println("I(Imperial) M(Metric) : I/M");
-		selection = inputval.next().charAt(0);
-		
-		System.out.println("Please enter your gender: M/F");
-		gender = inputval.next().charAt(0);
-		
-		//For adults 20 years old and older, BMI is interpreted using standard weight status categories.
-		//These categories are the same for men and women of all body types and ages.
-		
-		System.out.println("Please enter your age: ");
-		age = inputval.nextInt();
-		//if (age >= 0 && age < 120) {
-			//inputval.age = age;
-		//} else throw new IllegalArgumentException("Age can not be negative or more than 120");
-		
-		//American System
-		//BMI = Weight in pounds * 703 / (height in inches * height in inches)
-		
-		System.out.print("Please Enter your Weight in pounds: ");
-		weight = inputval.nextInt();
-		
-		System.out.println("Please enter your height? ");
-		System.out.print("feet: ");
-		feet = inputval.nextInt();
-		
-		System.out.print("Inches: ");
-		inches = inputval.nextInt();
-		
-		totalHeightinInches = (feet*12)+inches;
-		
-		totalBMI= (weight * BMI_CONSTANT_VALUE) / (Math.pow(totalHeightinInches,2));
-		
-		DecimalFormat decfmt = new DecimalFormat("0.###");
-		
-		System.out.println("Your total BMI is: " + decfmt.format(totalBMI));
-		printBMICategory(totalBMI);
-		//printBMICategory(BMIcategory);
-        //calculateBMI();
-    }
-	private static void printBMICategory(double totalBMI) {
-	 if(totalBMI < 15) {
-            System.out.println("You are very severely underweight");
-	 }
-            else if (totalBMI >=15 && totalBMI <= 16) {
-            	 System.out.println("You are severely underweight");
-            }
-            else if (totalBMI >16 && totalBMI <= 18.5) {
-            	System.out.println("You are underweight");
-            }
-		else if(totalBMI < 18.5 && totalBMI <= 25) {
-            System.out.println("You are normal (healthy weight)");
-        }else if (totalBMI >25 && totalBMI <= 30) {
-            System.out.println("You are overweight");
-        }else if (totalBMI >30 && totalBMI <= 35) {
-            System.out.println("You are obese");
+public class BMICalculatorInMetric 
+{
+	public static void main(String[] args)
+	{
+		//initializing variables
+		double weight=0;   
+        double height=0;
+        //Creating the object of Scanner Class
+		Scanner userinput = new Scanner(System.in);
+		//Creating the object of Scanner Class
+		Scanner dietplan = new Scanner(System.in);
+		//allow customer to choose the system either metric or imperial system
+		System.out.println("Choose '1' for Metric System");
+		System.out.println("Choose '2' for Imperial System");
+		//take input from customers
+        int customerchoice=userinput.nextInt();
+        //switch function to hold the customer input on system choices
+        switch(customerchoice)
+        {
+        case 1:
+        {
+        	//metric system
+        	System.out.print("Enter your height(meter): "); 
+        	height=userinput.nextDouble();
+        	System.out.print("\nEnter your weight(Kg): ");
+        	weight=userinput.nextDouble();
+        	break;
         }
-            else if (totalBMI >35 && totalBMI <= 40) {
-            	System.out.println("You are severely obese");
-        }else {
-            System.out.println("You are very severely obese");
+        case 2:
+        {
+        	//Imperial system
+        	System.out.print("Enter your height(feet): ");
+        	double feet=userinput.nextDouble();
+        	System.out.print("Enter your height(inches): ");
+        	double inches=userinput.nextDouble();
+        	inches=(12*feet)+inches;							    // 1 feet =12 inches
+        	height= inches*0.0254;									//1 inches = 0.0254 m
+        	System.out.print("\nEnter your weight(pound): ");
+        	double pound=userinput.nextDouble();
+        	weight=(pound*0.45359);									// 1 pound = 0.45359 kg
+        	break;
         }
-    }
-
-    /*private static void calculateBMI() throws Exception {
-    	System.out.print("Please Enter your Gender: ");       
-    	System.out.print("Please enter your weight in kg: ");
-        Scanner s = new Scanner(System.in);
-        float weight = s.nextFloat();
-        System.out.print("Please enter your height in cm: ");
-        float height = s.nextFloat();
-
-        // multiplication by 100*100 for cm to m conversion
-        float bmi = (100*100*weight)/(height*height);
-
-        System.out.println("Your BMI is: "+bmi);
-        printBMICategory(bmi);
-
-    }*/
-
-    // Prints BMI category
-   /* private static String printBMICategory(double totalBMI) {
-    	String BMIcategory;
-    	if (totalBMI < 15) {
-			BMIcategory = "very severely underweight";
-		} else if (totalBMI >=15 && totalBMI <= 16) {
-			BMIcategory = "severely underweight";
-		} else if (totalBMI >16 && totalBMI <= 18.5) {
-			BMIcategory = "underweight";
-		} else if (totalBMI >18.5 && totalBMI <= 25) {
-			BMIcategory = "normal (healthy weight)";
-		} else if (totalBMI >25 && totalBMI <= 30) {
-			BMIcategory = "overweight";
-		} else if (totalBMI >30 && totalBMI <= 35) {
-			BMIcategory = "moderately obese";
-		} else if (totalBMI >35 && totalBMI <= 40) {
-			BMIcategory = "severely obese";
-		} else {
-			BMIcategory ="very severely obese";
-		}
-		return BMIcategory;
-		
+        default:
+        {
+        	//Throw error
+        	System.out.println("Please enter either 1 or 2 as your choice..");
+        	break;
+        }
+        }
+        if(height !=0.0 && weight != 0.0)
+        {
+        	//actual formula
+        	double BMICategory=weight / (height*height);
+        	System.out.println("BMI Value:"+BMICategory);
+        	//show the results
+        	// National Institutes of Health.
+        	if(BMICategory < 15) {
+        		System.out.println("You are very severely underweight");
+        		System.out.println("You are severly thin and need to gain weight. Please take care of your health properly. Follow proper diet");
+        		System.out.println("Choose '1' for Vegetarian diet");
+        		System.out.println("Choose '2' for Non-Vegetarian diet");
+        		//take diet input from customers
+                int customerdietchoice=dietplan.nextInt();
+                //switch function to hold the customer input on system choices
+                switch(customerdietchoice)
+                {
+                case 1:
+                {
+                	//metric system
+                	System.out.println("Vegetarian: Daal, Rice" ); 
+                	break;
+                }
+                case 2:
+                {
+                	//Imperial system
+                	System.out.println("Non-Vegetarian: Chicken" ); 
+                	break;
+                }
+                default:
+                {
+                	//Throw error
+                	System.out.println("Please enter either 1 or 2 as your choice..");
+                	break;
+                }
+                }
+        	}
+        	else if (BMICategory >=15 && BMICategory <= 16) 
+        	{
+           	 System.out.println("You are severely underweight");
+           	 System.out.println("You are severly thin and need to gain weight. Please take care of your health properly. Follow proper diet");
+            }
+        	else if(BMICategory >16 && BMICategory <= 18.5)
+        	{
+        		System.out.println("You are 'underweight'");
+        		System.out.println("You are moderately thin and need to gain weight. Please take care of your weight to improve your health!!");
+        	}
+        	if(BMICategory>=18.5 && BMICategory<=24.9)
+        	{
+        		System.out.println("You are 'normal weight'");
+        		System.out.println("Your are maintaining good health!. You need to maintain this fitness..");	
+        	}
+        	if(BMICategory>=25.0 && BMICategory<=29.9)
+        	{
+        	System.out.println("You are 'overweight'");
+        	System.out.println("You are overweight. You need to loose weight. Please follow proper diet to be fit and healthy");
+        	}
+        	if(BMICategory>=30.0)
+        	{
+        	System.out.println("You are 'obese' ");
+        	System.out.println("You need to be fit! Please keep your health properly with regular exercise..");
+        	}
+        }
 	}
-    	*/		
-        
-    }
+}
