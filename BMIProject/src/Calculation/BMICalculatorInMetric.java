@@ -104,26 +104,156 @@ public class BMICalculatorInMetric
         	{
            	 System.out.println("You are severely underweight");
            	 System.out.println("You are severly thin and need to gain weight. Please take care of your health properly. Follow proper diet");
+           	System.out.println("Choose '1' for Vegetarian diet");
+    		System.out.println("Choose '2' for Non-Vegetarian diet");
+    		//take diet input from customers
+            int customerdietchoice=dietplan.nextInt();
+            //switch function to hold the customer input on system choices
+            switch(customerdietchoice)
+            {
+            case 1:
+            {
+            	//metric system
+            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	break;
             }
+            case 2:
+            {
+            	//Imperial system
+            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	break;
+            }
+            default:
+            {
+            	//Throw error
+            	System.out.println("Please enter either 1 or 2 as your choice..");
+            	break;
+            }
+            }
+        	}
         	else if(BMICategory >16 && BMICategory <= 18.5)
         	{
         		System.out.println("You are 'underweight'");
         		System.out.println("You are moderately thin and need to gain weight. Please take care of your weight to improve your health!!");
+        		System.out.println("Choose '1' for Vegetarian diet");
+        		System.out.println("Choose '2' for Non-Vegetarian diet");
+        		//take diet input from customers
+                int customerdietchoice=dietplan.nextInt();
+                //switch function to hold the customer input on system choices
+                switch(customerdietchoice)
+                {
+                case 1:
+                {
+                	//metric system
+                	System.out.println("Vegetarian: Daal, Rice" ); 
+                	break;
+                }
+                case 2:
+                {
+                	//Imperial system
+                	System.out.println("Non-Vegetarian: Chicken" ); 
+                	break;
+                }
+                default:
+                {
+                	//Throw error
+                	System.out.println("Please enter either 1 or 2 as your choice..");
+                	break;
+                }
+                }
         	}
         	if(BMICategory>=18.5 && BMICategory<=24.9)
         	{
         		System.out.println("You are 'normal weight'");
         		System.out.println("Your are maintaining good health!. You need to maintain this fitness..");	
+        		System.out.println("Choose '1' for Vegetarian diet");
+        		System.out.println("Choose '2' for Non-Vegetarian diet");
+        		//take diet input from customers
+                int customerdietchoice=dietplan.nextInt();
+                //switch function to hold the customer input on system choices
+                switch(customerdietchoice)
+                {
+                case 1:
+                {
+                	//metric system
+                	System.out.println("Vegetarian: Daal, Rice" ); 
+                	break;
+                }
+                case 2:
+                {
+                	//Imperial system
+                	System.out.println("Non-Vegetarian: Chicken" ); 
+                	break;
+                }
+                default:
+                {
+                	//Throw error
+                	System.out.println("Please enter either 1 or 2 as your choice..");
+                	break;
+                }
+                }
         	}
         	if(BMICategory>=25.0 && BMICategory<=29.9)
         	{
         	System.out.println("You are 'overweight'");
         	System.out.println("You are overweight. You need to loose weight. Please follow proper diet to be fit and healthy");
+        	System.out.println("Choose '1' for Vegetarian diet");
+    		System.out.println("Choose '2' for Non-Vegetarian diet");
+    		//take diet input from customers
+            int customerdietchoice=dietplan.nextInt();
+            //switch function to hold the customer input on system choices
+            switch(customerdietchoice)
+            {
+            case 1:
+            {
+            	//metric system
+            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	break;
+            }
+            case 2:
+            {
+            	//Imperial system
+            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	break;
+            }
+            default:
+            {
+            	//Throw error
+            	System.out.println("Please enter either 1 or 2 as your choice..");
+            	break;
+            }
+            }
         	}
         	if(BMICategory>=30.0)
         	{
         	System.out.println("You are 'obese' ");
         	System.out.println("You need to be fit! Please keep your health properly with regular exercise..");
+        	System.out.println("Choose '1' for Vegetarian diet");
+    		System.out.println("Choose '2' for Non-Vegetarian diet");
+    		//take diet input from customers
+            int customerdietchoice=dietplan.nextInt();
+            //switch function to hold the customer input on system choices
+            switch(customerdietchoice)
+            {
+            case 1:
+            {
+            	//metric system
+            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	break;
+            }
+            case 2:
+            {
+            	//Imperial system
+            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	break;
+            }
+            default:
+            {
+            	//Throw error
+            	System.out.println("Please enter either 1 or 2 as your choice..");
+            	break;
+            }
+            }
         	}
         }
 	}
