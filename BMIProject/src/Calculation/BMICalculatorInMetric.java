@@ -14,7 +14,7 @@ package Calculation;
 import java.util.Scanner;
 //import java.util.*; 				          // this will put everything
 
-public class BMICalculatorInMetric 
+public class BMICalculatorInMetricandImperial 
 {
 	public static void main(String[] args)
 	{
