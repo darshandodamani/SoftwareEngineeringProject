@@ -12,7 +12,7 @@
 
 package Calculation;
 import java.util.Scanner;
-import java.util.*; 				          // this will put everything
+//import java.util.*; 				          // this will put everything
 
 public class BMICalculatorInMetric 
 {
@@ -22,8 +22,10 @@ public class BMICalculatorInMetric
 		double weight=0;   
         double height=0;
         //Creating the object of Scanner Class
+		@SuppressWarnings("resource")
 		Scanner userinput = new Scanner(System.in);
 		//Creating the object of Scanner Class
+		@SuppressWarnings("resource")
 		Scanner dietplan = new Scanner(System.in);
 		//allow customer to choose the system either metric or imperial system
 		System.out.println("Choose '1' for Metric System");
@@ -114,13 +116,13 @@ public class BMICalculatorInMetric
             case 1:
             {
             	//metric system
-            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	System.out.println("Vegetarian Diet Plan: \\n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \\n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \\n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu." ); 
             	break;
             }
             case 2:
             {
             	//Imperial system
-            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	System.out.println("Non-Vegetarian Diet Plan: \\n Breakfast:  2 scrambled eggs, 50g oatmeal porridge. \\n Lunch: 1 cup cooked rice, 1/2 cup lentil chicken curry. \\n Dinner: Chicken tortilla wrap." ); 
             	break;
             }
             default:
@@ -145,13 +147,13 @@ public class BMICalculatorInMetric
                 case 1:
                 {
                 	//metric system
-                	System.out.println("Vegetarian: Daal, Rice" ); 
+                	System.out.println("Vegetarian Diet Plan: \\n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \\n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \\n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu." ); 
                 	break;
                 }
                 case 2:
                 {
                 	//Imperial system
-                	System.out.println("Non-Vegetarian: Chicken" ); 
+                	System.out.println("Non-Vegetarian Diet Plan: \\n Breakfast:  2 scrambled eggs, 50g oatmeal porridge. \\n Lunch: 1 cup cooked rice, 1/2 cup lentil chicken curry. \\n Dinner: Chicken tortilla wrap." ); 
                 	break;
                 }
                 default:
@@ -176,13 +178,13 @@ public class BMICalculatorInMetric
                 case 1:
                 {
                 	//metric system
-                	System.out.println("Vegetarian: Daal, Rice" ); 
+                	System.out.println("Non-Vegetarian Diet Plan: \\n Breakfast:  2 scrambled eggs, 50g oatmeal porridge. \\n Lunch: 1 cup cooked rice, 1/2 cup lentil chicken curry. \\n Dinner: Chicken tortilla wrap." ); 
                 	break;
                 }
                 case 2:
                 {
                 	//Imperial system
-                	System.out.println("Non-Vegetarian: Chicken" ); 
+                	System.out.println("Vegetarian Diet Plan: \\n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \\n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \\n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu." ); 
                 	break;
                 }
                 default:
@@ -207,13 +209,13 @@ public class BMICalculatorInMetric
             case 1:
             {
             	//metric system
-            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	System.out.println("Vegetarian Diet Plan: \\n Breakfast: 500ml green smoothie, 1 cup spinach, 1 small banana, 1 cup almond milk, 1 tablespoon flaxseed, 1/2 an apple, 1/4 an avocado. \\n Lunch: 1 cup cooked rice, 1 cup cooked rice, 1 cup non starchy vegetable. \\n Dinner: 1 cup lentil curry with 1 wheat naan bread 150g scrambled tofu." ); 
             	break;
             }
             case 2:
             {
             	//Imperial system
-            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	System.out.println("Non-Vegetarian Diet Plan: \\n Breakfast: 2 boiled eggs, 40g oatmeal porridge. \\n Lunch: Chicken and avocado salad, 100gms grilled chicken breast. \\n Dinner: Chicken soup." ); 
             	break;
             }
             default:
@@ -238,13 +240,13 @@ public class BMICalculatorInMetric
             case 1:
             {
             	//metric system
-            	System.out.println("Vegetarian: Daal, Rice" ); 
+            	System.out.println("Vegetarian Diet Plan:  \\n Breakfast:  500ml green smoothie, 500ml green smoothie, 1 small banana, 1 cup almond milk. \\n Lunch: 1/2 cup cooked rice, 2 cups salad vegetables. \\n Dinner: 1 wheat naan bread, 1  cup lentil curry with" ); 
             	break;
             }
             case 2:
             {
             	//Imperial system
-            	System.out.println("Non-Vegetarian: Chicken" ); 
+            	System.out.println("Non-Vegetarian Diet Plan: \\n Breakfast: 2 boiled eggs, 2 boiled eggs. \\n Lunch: Chicken and avocado salad, 100gms grilled chicken breast. \\n Dinner: Chicken Soup." ); 
             	break;
             }
             default:

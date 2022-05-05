@@ -290,7 +290,7 @@ public class CalculateBMI {
               diet_output = "Vegetarian Diet Plan: \n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu."  ;
           }
           else if (r<25){
-              diet_output = "Vegetarian Diet Plan: \n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu."  ;
+            diet_output = "Vegetarian Diet Plan: \n Breakfast: 50g whole grain cereal with 1 cup almond milk and a handful of walnut, 50g oatmeal porridge, 1 tablespoon flax seed, 1 medium banana. \n Lunch: 1 cup cooked rice, 1 cup non starchy vegetable. \n Dinner: 1 cup lentil curry with 2 wheat naan bread 150g scrambled tofu."  ;
           }
           else if(r<30){
               diet_output = "Vegetarian Diet Plan: \n Breakfast: 500ml green smoothie, 1 cup spinach, 1 small banana, 1 cup almond milk, 1 tablespoon flaxseed, 1/2 an apple, 1/4 an avocado. \n Lunch: 1 cup cooked rice, 1 cup cooked rice, 1 cup non starchy vegetable. \n Dinner: 1 cup lentil curry with 1 wheat naan bread 150g scrambled tofu."  ;
